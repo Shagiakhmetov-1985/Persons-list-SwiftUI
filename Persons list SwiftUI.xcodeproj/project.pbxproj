@@ -14,7 +14,7 @@
 		C35504402678AAD400038565 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C355043F2678AAD400038565 /* Preview Assets.xcassets */; };
 		C35504482678AB1100038565 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35504472678AB1100038565 /* DataManager.swift */; };
 		C355044A2678B32A00038565 /* PersonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35504492678B32A00038565 /* PersonManager.swift */; };
-		C355044C2678DB4600038565 /* PersonRowOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355044B2678DB4600038565 /* PersonRowOne.swift */; };
+		C355044C2678DB4600038565 /* PersonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355044B2678DB4600038565 /* PersonRow.swift */; };
 		C355044E2678E26500038565 /* ListPersonsOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355044D2678E26500038565 /* ListPersonsOne.swift */; };
 		C355045026793B9D00038565 /* ListPersonsTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355044F26793B9D00038565 /* ListPersonsTwo.swift */; };
 /* End PBXBuildFile section */
@@ -29,7 +29,7 @@
 		C35504412678AAD400038565 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C35504472678AB1100038565 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		C35504492678B32A00038565 /* PersonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonManager.swift; sourceTree = "<group>"; };
-		C355044B2678DB4600038565 /* PersonRowOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRowOne.swift; sourceTree = "<group>"; };
+		C355044B2678DB4600038565 /* PersonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRow.swift; sourceTree = "<group>"; };
 		C355044D2678E26500038565 /* ListPersonsOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPersonsOne.swift; sourceTree = "<group>"; };
 		C355044F26793B9D00038565 /* ListPersonsTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPersonsTwo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,7 +76,7 @@
 				C35504382678AAD200038565 /* Persons_list_SwiftUIApp.swift */,
 				C355043A2678AAD200038565 /* ContentView.swift */,
 				C355044D2678E26500038565 /* ListPersonsOne.swift */,
-				C355044B2678DB4600038565 /* PersonRowOne.swift */,
+				C355044B2678DB4600038565 /* PersonRow.swift */,
 				C32F0BFE2679FD7F00EAD6A1 /* DetailsPersonOne.swift */,
 				C355044F26793B9D00038565 /* ListPersonsTwo.swift */,
 				C32F0C00267A1F3200EAD6A1 /* Models */,
@@ -171,7 +171,7 @@
 				C355043B2678AAD200038565 /* ContentView.swift in Sources */,
 				C35504482678AB1100038565 /* DataManager.swift in Sources */,
 				C35504392678AAD200038565 /* Persons_list_SwiftUIApp.swift in Sources */,
-				C355044C2678DB4600038565 /* PersonRowOne.swift in Sources */,
+				C355044C2678DB4600038565 /* PersonRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,34 +8,25 @@
 import SwiftUI
 
 struct ListPersonsTwo: View {
-    let listName: String
     let persons: [Person]
     var body: some View {
         NavigationView {
             List {
                 ForEach(persons) { gr in
-                    Section(header: Text("\(gr.firstName) \(gr.lastName)")) {
-                        HStack {
-                            Image(systemName: "phone")
-                                .foregroundColor(.blue)
-                            Text(gr.phone)
-                        }
-                        HStack {
-                            Image(systemName: "tray")
-                                .foregroundColor(.blue)
-                            Text(gr.email)
-                        }
+                    Section(header: Text("\(gr.fullName)")) {
+                        PersonRow(person: gr.phone, image: SystemImages.phone.rawValue)
+                        PersonRow(person: gr.email, image: SystemImages.email.rawValue)
                     }
-                    .textCase(nil)
+                    .textCase(.none)
                 }
             }
-            .navigationBarTitle(listName)
+            .navigationBarTitle("Contact List")
         }
     }
 }
 
 struct ListPersonsTwo_Previews: PreviewProvider {
     static var previews: some View {
-        ListPersonsTwo(listName: "Contact List", persons: Person.getPersonList())
+        ListPersonsTwo(persons: Person.getPersonList())
     }
 }

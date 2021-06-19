@@ -8,22 +8,22 @@
 import SwiftUI
 
 struct ListPersonsOne: View {
-    let listName: String
     let persons: [Person]
     var body: some View {
         NavigationView {
-            List(persons) { list in
-                NavigationLink(destination: DetailsPersonOne(persons: list)) {
-                    PersonRowOne(persons: list)
+            List(persons) { person in
+                NavigationLink(destination: DetailsPersonOne(person: person)) {
+                    Text("\(person.fullName)")
+                        .font(.system(size: 25))
                 }
             }
-            .navigationBarTitle(listName)
+            .navigationBarTitle("Contact List")
         }
     }
 }
 
 struct ListPersonsOne_Previews: PreviewProvider {
     static var previews: some View {
-        ListPersonsOne(listName: "Contact List", persons: Person.getPersonList())
+        ListPersonsOne(persons: Person.getPersonList())
     }
 }

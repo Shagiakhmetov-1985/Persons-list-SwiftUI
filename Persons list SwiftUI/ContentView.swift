@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    let persons: [Person]
+    private let persons = Person.getPersonList()
     var body: some View {
         TabView {
-            ListPersonsOne(listName: "Contact List", persons: persons)
+            ListPersonsOne(persons: persons)
                 .tabItem {
-                    Image(systemName: "person.3")
+                    Image(systemName: SystemImages.contacts.rawValue)
                     Text("Contacts")
                 }
-            ListPersonsTwo(listName: "Contact List", persons: persons)
+            ListPersonsTwo(persons: persons)
                 .tabItem {
-                    Image(systemName: "phone")
+                    Image(systemName: SystemImages.phone.rawValue)
                     Text("Numbers")
                 }
         }
@@ -27,6 +27,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(persons: Person.getPersonList())
+        ContentView()
     }
 }

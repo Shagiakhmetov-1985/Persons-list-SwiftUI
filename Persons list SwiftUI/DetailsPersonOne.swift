@@ -8,37 +8,28 @@
 import SwiftUI
 
 struct DetailsPersonOne: View {
-    let persons: Person
+    let person: Person
     var body: some View {
         NavigationView {
-            List {
-                Image(systemName: "person.fill")
-                    .resizable()
-                    .frame(width: 170, height: 170)
-                    .padding(.leading, 75)
-                    .padding()
+            Form {
                 HStack {
-                    Image(systemName: "phone")
-                        .font(.system(size: 25))
-                        .foregroundColor(.blue)
-                    Text(persons.phone)
-                        .font(.system(size: 25))
+                    Spacer()
+                    Image(systemName: "person.fill")
+                        .resizable()
+                        .frame(width: 170, height: 170)
+                        .padding()
+                    Spacer()
                 }
-                HStack {
-                    Image(systemName: "tray")
-                        .font(.system(size: 25))
-                        .foregroundColor(.blue)
-                    Text(persons.email)
-                        .font(.system(size: 25))
-                }
+                PersonRow(person: person.phone, image: SystemImages.phone.rawValue)
+                PersonRow(person: person.email, image: SystemImages.email.rawValue)
             }
-            .navigationBarTitle("\(persons.firstName) \(persons.lastName)")
+            .navigationBarTitle("\(person.fullName)")
         }
     }
 }
 
 struct DetailsPersonOne_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsPersonOne(persons: Person.getPersonListOne())
+        DetailsPersonOne(person: Person.getPersonList().first!)
     }
 }

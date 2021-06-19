@@ -5,21 +5,18 @@
 //  Created by Marat Shagiakhmetov on 15.06.2021.
 //
 
-import SwiftUI
+import Foundation
 
-class Person: Identifiable {
+struct Person: Identifiable {
+    let id: Int
     let firstName: String
     let lastName: String
     let email: String
     let phone: String
     let emailAndPhone: [String]
     
-    init(firstName: String, lastName: String, email: String, phone: String, emailAndPhone: [String]) {
-        self.firstName = firstName
-        self.lastName = lastName
-        self.email = email
-        self.phone = phone
-        self.emailAndPhone = emailAndPhone
+    var fullName: String {
+        "\(firstName) \(lastName)"
     }
 }
 
@@ -36,6 +33,7 @@ extension Person {
 
         for index in 0..<iterationCount {
             let person = Person(
+                id: index + 1,
                 firstName: firstName[index],
                 lastName: lastName[index],
                 email: email[index],
@@ -46,21 +44,11 @@ extension Person {
         }
         return dataManager
     }
-    
-    static func getPersonListOne() -> Person {
-        let firstName = DataManager.shared.firstName.shuffled()
-        let lastName = DataManager.shared.lastName.shuffled()
-        let email = DataManager.shared.email.shuffled()
-        let phone = DataManager.shared.phone.shuffled()
-        
-        let person = Person(
-            firstName: firstName.first ?? "",
-            lastName: lastName.first ?? "",
-            email: email.first ?? "",
-            phone: phone.first ?? "",
-            emailAndPhone: [email.first ?? "", phone.first ?? ""]
-        )
-        
-        return person
-    }
+}
+
+enum SystemImages: String {
+    case phone = "phone"
+    case email = "tray"
+    case avatar = "person.fill"
+    case contacts = "person.3"
 }
